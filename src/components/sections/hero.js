@@ -3,6 +3,8 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
 import { navDelay, loaderDelay } from '@utils';
 import { usePrefersReducedMotion } from '@hooks';
+import { FaMapMarkerAlt } from 'react-icons/fa';
+import { TypeAnimation } from 'react-type-animation';
 
 const StyledHeroSection = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
@@ -44,6 +46,13 @@ const StyledHeroSection = styled.section`
     ${({ theme }) => theme.mixins.bigButton};
     margin-top: 50px;
   }
+
+  .location-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+  }
 `;
 
 const Hero = () => {
@@ -60,8 +69,25 @@ const Hero = () => {
   }, []);
 
   const one = <h1>Hi, my name is</h1>;
-  const two = <h2 className="big-heading">Aditya Choudhari.</h2>;
-  const three = <h3 className="big-heading">I am a full-stack software engineer.</h3>;
+  const two = (
+    <h2 className="big-heading">
+      <TypeAnimation sequence={['Aditya Choudhari.', 1500]} cursor={false} />
+    </h2>
+  );
+  const three = (
+    <h3 className="big-heading">
+      {' '}
+      <TypeAnimation sequence={[1500, 'I am a full-stack software engineer.', 1500]} />
+    </h3>
+  );
+  const five = (
+    <div className="location-div">
+      <div className="location-icon">
+        <FaMapMarkerAlt className="location-icon" fontSize={20} />
+      </div>
+      San Francisco
+    </div>
+  );
   const four = (
     <>
       <p>
@@ -78,15 +104,6 @@ const Hero = () => {
         .
       </p>
     </>
-  );
-  const five = (
-    <a
-      className="email-link"
-      href="https://www.newline.co/courses/build-a-spotify-connected-app"
-      target="_blank"
-      rel="noreferrer">
-      Check out my course!
-    </a>
   );
 
   const items = [one, two, three, four, five];

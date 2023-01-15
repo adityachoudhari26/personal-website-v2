@@ -135,21 +135,18 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Brittany and I enjoy creating things that live on the internet. My
-              interest in web development started back in 2012 when I decided to try editing custom
-              Tumblr themes — turns out hacking together a custom reblog button taught me a lot
-              about HTML &amp; CSS!
+              Hello! My name is Aditya and I am software engineer at Weights and Biases. I first
+              became interested in software development when I took AP Computer Science back in
+              highschool. At Dartmouth, I majored in computer science and took classes such as OOP,
+              Full-Stack Web Development, and System Design.
             </p>
 
             <p>
-              Fast-forward to today, and I’ve had the privilege of working at{' '}
-              <a href="https://us.mullenlowe.com/">an advertising agency</a>,{' '}
-              <a href="https://starry.com/">a start-up</a>,{' '}
-              <a href="https://www.apple.com/">a huge corporation</a>, and{' '}
-              <a href="https://scout.camd.northeastern.edu/">a student-led design studio</a>. My
-              main focus these days is building accessible, inclusive products and digital
-              experiences at <a href="https://upstatement.com/">Upstatement</a> for a variety of
-              clients.
+              When I'm not coding, I love to go on runs, bike rides, and hikes! I am currently
+              training for the San Francisco marathon that is happening in July, so a lot of my
+              weekends are spent on my feet. I also love exploring the different parts of San
+              Francisco, and some of my favorite places are SFMOMA, the exploratorium, and golden
+              gate park.
             </p>
 
             <p>
@@ -175,6 +172,7 @@ const About = () => {
               className="img"
               src="../../images/me.jpg"
               width={500}
+              height={500}
               quality={95}
               formats={['AUTO', 'WEBP', 'AVIF']}
               alt="Headshot"

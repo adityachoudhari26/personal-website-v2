@@ -3,7 +3,7 @@ module.exports = [{
       options: {"plugins":[]},
     },{
       plugin: require('../node_modules/gatsby-plugin-manifest/gatsby-browser.js'),
-      options: {"plugins":[],"name":"Aditya Choudhari","short_name":"Aditya Choudhari","start_url":"/","background_color":"#21004b","theme_color":"#21004b","display":"minimal-ui","icon":"src/images/logo.png","legacy":true,"theme_color_in_head":true,"cache_busting_mode":"query","crossOrigin":"anonymous","include_favicon":true,"cacheDigest":"dedd91ab2778735e31d0a7ccbb422fb7"},
+      options: {"plugins":[],"name":"Aditya Choudhari","short_name":"Aditya Choudhari","start_url":"/","background_color":"#21004b","theme_color":"#21004b","display":"minimal-ui","icon":"src/images/logo.png","legacy":true,"theme_color_in_head":true,"cache_busting_mode":"query","crossOrigin":"anonymous","include_favicon":true,"cacheDigest":"018e7c0906d9e9d824857bdf9c2a0b59"},
     },{
       plugin: require('../node_modules/gatsby-plugin-offline/gatsby-browser.js'),
       options: {"plugins":[]},
