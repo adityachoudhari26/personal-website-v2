@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: http://adityachoudhari.com/sitemap.xml
+Host: adityachoudhari.com

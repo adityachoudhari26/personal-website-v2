@@ -4,6 +4,4 @@ title: 'Hiking'
 cover: './demo.jpg'
 ---
 
-Having struggled with understanding how the Spotify OAuth flow works, I made the course I wish I could have had.
-
-Unlike tutorials that only cover a few concepts and leave you with half-baked GitHub repositories, this course covers everything from explaining the principles of REST APIs to implementing Spotify's OAuth flow and fetching API data in a React app. By the end of the course, you’ll have an app deployed to the internet you can add to your portfolio.
+Last summer my boy Dan and I went to Colorado to hike some of the magnificent 14ers. During the trip I was able to finish 3 14ers: [Mt. Sherman (14043 ft)](https://www.strava.com/activities/7404834241/overview) and a continuous traverse across [Mt. Belford (14203) and Mt.Oxford (14160)](https://www.strava.com/activities/7416055695/overview). I hope to add more to the list!

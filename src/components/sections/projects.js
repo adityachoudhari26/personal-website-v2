@@ -6,6 +6,9 @@ import { srConfig } from '@config';
 import sr from '@utils/sr';
 import { Icon } from '@components/icons';
 import { usePrefersReducedMotion } from '@hooks';
+import { BiRun } from 'react-icons/bi';
+import { SiStrava } from 'react-icons/si';
+import { MdOutlineDirectionsBike } from 'react-icons/md';
 
 const StyledProjectsSection = styled.section`
   display: flex;
@@ -40,6 +43,11 @@ const StyledProjectsSection = styled.section`
   .more-button {
     ${({ theme }) => theme.mixins.button};
     margin: 80px auto 0;
+  }
+
+  .strava-button {
+    ${({ theme }) => theme.mixins.button};
+    margin: 10px auto 0;
   }
 `;
 
@@ -79,6 +87,9 @@ const StyledProject = styled.li`
   .project-top {
     ${({ theme }) => theme.mixins.flexBetween};
     margin-bottom: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-bewteen;
 
     .folder {
       color: var(--green);
@@ -92,7 +103,7 @@ const StyledProject = styled.li`
       display: flex;
       align-items: center;
       margin-right: -10px;
-      color: var(--light-slate);
+      color: #fc5201;
 
       a {
         ${({ theme }) => theme.mixins.flexCenter};
@@ -146,7 +157,7 @@ const StyledProject = styled.li`
 
   .project-tech-list {
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
     flex-grow: 1;
     flex-wrap: wrap;
     padding: 0;
@@ -179,9 +190,11 @@ const Projects = () => {
           node {
             frontmatter {
               title
-              tech
-              github
               external
+              type
+              pace
+              distance
+              date
             }
             html
           }
@@ -209,21 +222,24 @@ const Projects = () => {
 
   const projectInner = node => {
     const { frontmatter, html } = node;
-    const { github, external, title, tech } = frontmatter;
+    const { external, title, type, pace, distance, date } = frontmatter;
+
+    let icon;
+
+    if (type === 'run') {
+      icon = <BiRun />;
+    } else if (type === 'ride') {
+      icon = <MdOutlineDirectionsBike />;
+    } else {
+      icon = null;
+    }
 
     return (
       <div className="project-inner">
         <header>
           <div className="project-top">
-            <div className="folder">
-              <Icon name="Folder" />
-            </div>
+            <div className="folder">{icon}</div>
             <div className="project-links">
-              {github && (
-                <a href={github} aria-label="GitHub Link" target="_blank" rel="noreferrer">
-                  <Icon name="GitHub" />
-                </a>
-              )}
               {external && (
                 <a
                   href={external}
@@ -231,7 +247,7 @@ const Projects = () => {
                   className="external"
                   target="_blank"
                   rel="noreferrer">
-                  <Icon name="External" />
+                  <SiStrava />
                 </a>
               )}
             </div>
@@ -247,13 +263,14 @@ const Projects = () => {
         </header>
 
         <footer>
-          {tech && (
-            <ul className="project-tech-list">
-              {tech.map((tech, i) => (
-                <li key={i}>{tech}</li>
-              ))}
-            </ul>
-          )}
+          <ul className="project-tech-list">
+            <li>Date: {date}</li>
+            <li>Distsance: {distance}</li>
+            <li>
+              {type === 'run' ? 'Pace: ' : 'Speed: '} {pace}
+              {type === 'run' ? '/mi' : ' mph'}
+            </li>
+          </ul>
         </footer>
       </div>
     );
@@ -261,11 +278,15 @@ const Projects = () => {
 
   return (
     <StyledProjectsSection>
-      <h2 ref={revealTitle}>Other Noteworthy Projects</h2>
+      <h2 ref={revealTitle}>Strava Milestones</h2>
 
-      <Link className="inline-link archive-link" to="/archive" ref={revealArchiveLink}>
-        view the archive
-      </Link>
+      <button
+        className="strava-button"
+        onClick={() => {
+          window.open('https://www.strava.com/athletes/5234438');
+        }}>
+        Strava Profile
+      </button>
 
       <ul className="projects-grid">
         {prefersReducedMotion ? (

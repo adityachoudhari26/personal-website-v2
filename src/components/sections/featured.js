@@ -348,12 +348,9 @@ const Featured = () => {
       <StyledProjectsGrid>
         {featuredProjects &&
           featuredProjects.map(({ node }, i) => {
-            console.log(node);
             const { frontmatter, html } = node;
             const { external, title, cover } = frontmatter;
             const image = getImage(cover);
-
-            console.log(cover);
 
             return (
               <StyledProject key={i} ref={el => (revealProjects.current[i] = el)}>

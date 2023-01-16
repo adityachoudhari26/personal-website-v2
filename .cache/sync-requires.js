@@ -6,7 +6,6 @@ const preferDefault = m => (m && m.default) || m
 exports.components = {
   "component---cache-dev-404-page-js": preferDefault(require("/Users/achoudhari/Documents/personal-website-v2/.cache/dev-404-page.js")),
   "component---src-pages-404-js": preferDefault(require("/Users/achoudhari/Documents/personal-website-v2/src/pages/404.js")),
-  "component---src-pages-archive-js": preferDefault(require("/Users/achoudhari/Documents/personal-website-v2/src/pages/archive.js")),
   "component---src-pages-index-js": preferDefault(require("/Users/achoudhari/Documents/personal-website-v2/src/pages/index.js")),
   "component---src-pages-pensieve-index-js": preferDefault(require("/Users/achoudhari/Documents/personal-website-v2/src/pages/pensieve/index.js")),
   "component---src-pages-pensieve-tags-js": preferDefault(require("/Users/achoudhari/Documents/personal-website-v2/src/pages/pensieve/tags.js")),

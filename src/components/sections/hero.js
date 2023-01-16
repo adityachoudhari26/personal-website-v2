@@ -67,16 +67,20 @@ const Hero = () => {
     return () => clearTimeout(timeout);
   }, []);
 
-  const one = <h1>Hi, my name is</h1>;
+  const one = (
+    <h1>
+      <TypeAnimation sequence={['Hi, my name is']} cursor={false} />
+    </h1>
+  );
   const two = (
     <h2 className="big-heading">
-      <TypeAnimation sequence={['Aditya Choudhari.', 1500]} cursor={false} />
+      <TypeAnimation sequence={[1500, 'Aditya Choudhari.']} cursor={false} />
     </h2>
   );
   const three = (
     <h3 className="big-heading">
       {' '}
-      <TypeAnimation sequence={[1500, 'I am a full-stack software engineer.', 1500]} />
+      <TypeAnimation sequence={[3000, 'I am a full-stack software engineer.']} />
     </h3>
   );
   const five = (
@@ -90,9 +94,9 @@ const Hero = () => {
   const four = (
     <>
       <p>
-        I’m a full-stack software engineer who has experience across many stacks and technologies. I
-        am currently spending most of my dev time coding in Go and Typescript, working with GraphQL
-        and MySQL.
+        I am a full-stack software engineer who has experience across many stacks and technologies.
+        I am currently spending most of my dev time coding in Go and Typescript, working with
+        GraphQL and MySQL.
       </p>
 
       <p>
