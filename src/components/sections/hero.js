@@ -5,6 +5,9 @@ import { navDelay, loaderDelay } from '@utils';
 import { usePrefersReducedMotion } from '@hooks';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import { TypeAnimation } from 'react-type-animation';
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
+import { SiGoland } from 'react-icons/si';
+import 'react-vertical-timeline-component/style.min.css';
 
 const StyledHeroSection = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
@@ -60,10 +63,6 @@ const Hero = () => {
   const prefersReducedMotion = usePrefersReducedMotion();
 
   useEffect(() => {
-    if (prefersReducedMotion) {
-      return;
-    }
-
     const timeout = setTimeout(() => setIsMounted(true), navDelay);
     return () => clearTimeout(timeout);
   }, []);

@@ -46,10 +46,6 @@ const Contact = () => {
   const prefersReducedMotion = usePrefersReducedMotion();
 
   useEffect(() => {
-    if (prefersReducedMotion) {
-      return;
-    }
-
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
