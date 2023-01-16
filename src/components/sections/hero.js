@@ -83,14 +83,6 @@ const Hero = () => {
       <TypeAnimation sequence={[3000, 'I am a full-stack software engineer.']} />
     </h3>
   );
-  const five = (
-    <div className="location-div">
-      <div className="location-icon">
-        <FaMapMarkerAlt className="location-icon" fontSize={20} />
-      </div>
-      San Francisco
-    </div>
-  );
   const four = (
     <>
       <p>
@@ -109,7 +101,7 @@ const Hero = () => {
     </>
   );
 
-  const items = [one, two, three, four, five];
+  const items = [one, two, three, four];
 
   return (
     <StyledHeroSection>
