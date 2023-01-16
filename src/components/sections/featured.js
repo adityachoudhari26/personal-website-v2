@@ -291,14 +291,11 @@ const StyledProject = styled.li`
 
     .img {
       border-radius: var(--border-radius);
-      mix-blend-mode: multiply;
-      filter: grayscale(100%) contrast(1) brightness(90%);
 
       @media (max-width: 768px) {
         object-fit: cover;
         width: auto;
         height: 100%;
-        filter: grayscale(100%) contrast(1) brightness(50%);
       }
     }
   }
@@ -320,10 +317,6 @@ const Featured = () => {
                   gatsbyImageData(width: 700, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
                 }
               }
-              tech
-              github
-              external
-              cta
             }
             html
           }
@@ -355,8 +348,9 @@ const Featured = () => {
       <StyledProjectsGrid>
         {featuredProjects &&
           featuredProjects.map(({ node }, i) => {
+            console.log(node);
             const { frontmatter, html } = node;
-            const { external, title, tech, github, cover, cta } = frontmatter;
+            const { external, title, cover } = frontmatter;
             const image = getImage(cover);
 
             console.log(cover);
@@ -380,7 +374,7 @@ const Featured = () => {
                   {title === 'Distance Running' ? (
                     <video src={video} width="600" height="400" controls></video>
                   ) : (
-                    <a href={external ? external : github ? github : '#'}>
+                    <a href={'#'}>
                       <GatsbyImage image={image} alt={title} className="img" />
                     </a>
                   )}
