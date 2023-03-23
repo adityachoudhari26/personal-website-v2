@@ -7,5 +7,3 @@ pace: '7:07'
 distance: '10k'
 showInProjects: true
 ---
-
-Current 10 K PR (not specific to a race, just my fastest split)

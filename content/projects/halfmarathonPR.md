@@ -8,4 +8,4 @@ distance: '13.1 miles'
 showInProjects: true
 ---
 
-Current half marathon PR (at Kaiser Permanente Half Marathon Race)
+Kaiser Permanente Half Marathon Race

@@ -236,7 +236,7 @@ const Projects = () => {
 
     return (
       <div className="project-inner">
-        <header>
+        <header style={{width: '100%'}}>
           <div className="project-top">
             <div className="folder">{icon}</div>
             <div className="project-links">

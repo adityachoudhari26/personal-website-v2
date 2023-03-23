@@ -7,5 +7,3 @@ pace: '8:00'
 distance: '20 miles'
 showInProjects: true
 ---
-
-Current 20 mile PR (not an official time, just my fastest 20 mile split)
