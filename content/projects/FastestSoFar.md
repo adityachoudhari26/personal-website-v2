@@ -5,7 +5,7 @@ external: 'https://www.strava.com/activities/8094727927/overview'
 type: 'run'
 pace: '7:13'
 distance: '10k'
-showInProjects: true
+showInProjects: false
 ---
 
 This run holds both my 10k and 5k PR, I have yet to recreate this.

@@ -5,7 +5,7 @@ external: 'https://www.strava.com/activities/8265185415/overview'
 type: 'ride'
 pace: '10.9'
 distance: '30.43 mi'
-showInProjects: true
+showInProjects: false
 ---
 
 My first ride with my new BMC Teammachine, definitely felt the difference in speed between this bike and my commuter.

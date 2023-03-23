@@ -5,7 +5,7 @@ external: 'https://www.strava.com/activities/6396318129/overview'
 type: 'run'
 pace: '8:29'
 distance: '10k'
-showInProjects: true
+showInProjects: false
 ---
 
 This was my first ever continuous 10k and at this point was the longest distance I had ever run continuously.
